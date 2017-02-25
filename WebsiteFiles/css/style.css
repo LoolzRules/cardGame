@@ -1,0 +1,1313 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+body {
+ line-height:1;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+ display:block;
+}
+nav ul {
+ list-style:none;
+}
+blockquote, q {
+ quotes:none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content:'';
+ content:none;
+}
+a {
+ margin:0;
+ padding:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+/* change colours to suit your needs */
+table {
+ border-collapse:collapse;
+ border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+ display:block;
+ height:1px;
+ border:0; 
+ border-top:1px solid #cccccc;
+ margin:1em 0;
+ padding:0;
+}
+input, select {
+ vertical-align:middle;
+}
+
+
+
+/* MAIN RULES */
+html,
+body,
+#mainLogin,
+#mainGame,
+#mainMenu {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainMenu {
+	width: 200vw;
+}
+
+button:focus,
+input:focus {
+	outline: 0;
+}
+
+/* LOGIN RULES */
+#mainLogin {
+	background: #000;
+}
+
+#mainLogin>div {
+	position: absolute;
+	top: calc(50% - 150px);
+	left: calc(50% - 200px);
+	width: 400px;
+	height: auto;
+	background: #888;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	border: solid #444;
+}
+#register {
+	display: none;
+}
+
+#mainLogin>div>input {
+	margin: 20px 20px 0 20px;
+	width: 360px;
+	padding: 5px;
+	line-height: 20px;
+	height: 30px;
+	border: solid #666 2px;
+}
+
+#mainLogin>div>button {
+	display: block;
+	color: #ffffff;
+	font-size: 15px;
+	padding: 10px;
+	text-decoration: none;
+}
+
+#mainLogin>div>* {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#goLogin,
+#goRegister {
+	float: left;
+	margin: 20px 0 20px 20px;
+	background: #508c10;
+	border: solid #054e2d 2px!important;
+}
+#switchReg,
+#switchLog {
+	float: right;
+	margin: 20px 20px 20px 0;
+	background: #197ec2;
+	border: solid #124b6e 2px!important ;
+}
+
+#goLogin:hover,
+#goRegister:hover {
+	background: #054e2d;
+}
+#switchReg:hover,
+#switchLog:hover {
+	background: #124b6e;
+}
+
+#errSpan {
+	font-size: 15px;
+	margin: 2px 28px;
+	color: #b90707;
+	width: 344px;
+	display: none;
+}
+
+
+
+/* MENU RULES */
+#gameMenu,
+#deckMenu {
+	float: left;
+	position: relative;
+	height: 100%;
+	background: #000;
+}
+
+#gameMenu {
+	width: 50%;
+}
+
+#deckMenu {
+	padding: 0 5%;
+	width: 40%;
+}
+
+#menuButtons {
+	position: relative;
+	top: calc(50% - 150px);
+	left: calc(50% - 150px);
+	width: 300px;
+	height: auto;
+	background: #888;
+	text-align: center;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	border: solid #444;
+}
+
+#menuButtons>span {
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 40px;
+}
+
+#menuButtons>button {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: solid #000 2px;
+
+	width: calc(100% - 30px);
+
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+
+	margin: 0px 15px 15px 15px;
+}
+
+#deckCards,
+#deckDecks,
+#scrollBar {
+	height: 100%;
+	max-height: 100%;
+	float: left;
+}
+
+#deckCards {
+	width: calc(100% - 220px);
+}
+
+#deckDecks {
+	width: 200px;
+	height: 100%;
+}
+
+#fracButtonsHolder,
+#cardList,
+#manaButtonsHolder {
+	float: left;
+	width: 100%;
+}
+
+#cardList {
+	height: calc(100% - 80px);
+	background: #d7c084;
+	background: url(/img/paper-texture.jpg);
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+#cardList>div {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	display: none;
+}
+
+#cardList>div>.card {
+	margin-left: calc(20% - 120px);
+	margin-top: calc(24% - 150px);
+	width: 150px;
+	height: 225px;
+	font-size: 15px;
+}
+
+#prevPage,
+#nextPage {
+	position: absolute;
+	padding: 0px;
+	top: calc(50% - 20px);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	background: none;
+	z-index: 100;
+}
+
+#prevPage {
+	border-width: 20px 20px 20px 0px;
+	border-color: transparent #007bff transparent transparent;
+	left: calc(10% + 10px);
+}
+#prevPage:active {
+	border-color: transparent #18089e transparent transparent;
+}
+#nextPage {
+	border-width: 20px 0px 20px 20px;
+	border-color: transparent transparent transparent #007bff;
+	right: calc(10% + 230px);
+}
+#nextPage:active {
+	border-color: transparent transparent transparent #18089e;
+}
+
+
+#fracButtonsHolder {
+	height: 40px;
+}
+
+#fracButtonsHolder>button {
+	width: 40px;
+	height: 40px;
+
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+	border: ridge 5px;
+	border-bottom: none;
+}
+
+#manaButtonsHolder {
+	height: 40px;
+}
+
+#manaButtonsHolder>button {
+	width: 40px;
+	height: 40px;
+
+	/*
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top: none;
+	*/
+
+	border-radius: 20px;
+	border: outset 5px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 18px;
+
+	padding: 0;
+	text-align: center;
+	text-shadow: 0 0 4px #000;
+
+	background: #2989d8; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #2989d8 0%, #144050 58%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #2989d8 0%,#144050 58%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, #2989d8 0%,#144050 58%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#144050',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#fracButtonsHolder>button,
+#manaButtonsHolder>button {
+	border-color: #d2950c;
+}
+
+#deckDecks>span {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #b9af92;
+}
+
+#deckList {
+	height: calc(100% - 110px);
+	background: #241c2f;
+	overflow: hidden;
+}
+#deckList>.deckButton {
+	position: absolute;
+}
+#deckList>.deckButton:hover .removeDeck {
+	opacity: 0;
+}
+
+.deckButton {
+	transform: scale(.9, .9); 
+	width: 180px;
+	height: 40px;
+	border: 10px ridge #a97807;
+	text-align: left;
+}
+
+.deckName {
+	display: inline-block;
+	width: 100%;
+
+	font-size: 20px;
+	font-family: Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif;
+	font-weight: bold;
+
+	padding-left: 2px;
+
+	color: #fff;
+	border: none;
+	background: rgba(0,0,0,1);
+	background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(0,0,0,0)));
+	background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000', GradientType=1);
+}
+input.deckName {
+	height: 20px;
+}
+
+#deckInfo {
+	position: absolute;
+	top: -1000px;
+	left: -210px;
+	width: 180px;
+	height: 145px;
+	border: 10px ridge #a97807;
+	background: #b9af92;
+	text-align: center;
+}
+#deckInfo>.infoHolder {
+	float: left;
+	height: 100px;
+	width: 14px;
+	background: #000;
+	margin-top: 14px; 
+	margin-left: 7px;
+	overflow: hidden;
+}
+#deckInfo>.infoHolder:first-child {
+	margin-left: 13px;
+}
+#deckInfo>.infoHolder>.infoBar {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: #144050;
+}
+#deckInfo>span {
+	color: #fff;
+
+	display: inline-block;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+
+	position: relative;
+	top: -3px;
+	margin-left: 1px;
+
+	line-height: 22px;
+	font-size: 14px;
+	font-weight: bold;
+
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+
+	background: #144050;
+}
+#deckInfo>span:nth-child(8) {
+}
+#deckInfo>span,
+#deckInfo>.infoHolder {
+	border: 1px outset #a97807;
+}
+
+#deckList>.deckButton:hover #deckInfo {
+	top: -10px;
+}
+
+.removeDeck {
+	opacity: 0;
+
+	background: #ef6935;
+	color: #3a2902;
+
+	height: 20px;
+	width: 20px;
+	padding: 1px 2px;
+	line-height: 20px;
+	font-size: 16px;
+
+	border: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	position: relative;
+	left: calc(100% - 12.5px);
+	top: -7.5px;
+}
+
+#deckScroller>.deckButton:hover .removeDeck {
+	opacity: 1;
+}
+
+
+.deckButton[data-fid="1"] {
+	background: #631d01;
+}
+.deckButton[data-fid="2"] {
+	background: #4a4614;
+}
+.deckButton[data-fid="3"] {
+	background: #144050;
+}
+
+.deckCard {
+	height: 26px;
+	text-align: center;
+	border: 3px ridge #a97807;
+	background-color: #2a2722;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+}
+.deckCard>span {
+	display: inline-block;
+	line-height: 25px;
+	color: #fff;
+	position: relative;
+}
+.deckCardAP {
+	width: 25px;
+	-webkit-border-radius: 12.5px;
+	-moz-border-radius: 12.5px;
+	border-radius: 12.5px;
+	background: #144050;
+}
+.deckCardName {
+	width: 144px;
+	background-color: #777;
+	height: 19px;
+	line-height: 19px!important;
+	margin-top: 3px;
+	font-size: 15px;
+}
+.deckCardNum {
+	width: 25px;
+}
+
+#newDeck {
+	margin: 7.5px 12.5px;
+	width: calc(100% - 25px);
+	line-height: 21px;
+	font-size: 20px;
+}
+
+#backButton {
+	width: 100%;
+	line-height: 38px;
+	font-size: 30px;
+}
+#newDeck,
+#backButton {
+	display: inline-block;
+	color: #483f39;
+	background: #c0a98e;
+	border: 5px outset #a97807;
+	text-align: center;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#newDeck:active,
+#backButton:active {
+	background: #a08c75;
+	border: 5px outset #865f05;
+}
+
+#deckScroller,
+#cardScroller {
+	position: relative;
+}
+#scrollBar {
+	width: 20px;
+	background-color: #561c10;
+}
+#scroll {
+	width: 20px;
+	height: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: #000;
+	display: none;
+}
+
+.dialogue {
+	position: absolute;
+
+	background: #463522;
+	text-align: center;
+
+	border: 5px outset #d2950c;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+
+	padding: 20px;
+}
+
+#chooseDeckFaction {
+	position: absolute;
+	width: 80%;
+	height: 100%;
+	background: rgba(0,0,0,0.75);
+	display: none;
+}
+#chooseDeckFaction>div {
+	width: 400px;
+
+	top: calc(50% - 100px);
+	left: calc(50% - 200px);
+}
+#chooseDeckFaction>div>button {
+	position: relative;
+	display: inline-block;
+	margin: 10px 10px -10px 10px;
+
+	background: url(/img/allCovers.jpg); 
+	background-size: 1350% 300%;
+	background-origin: content-box;
+
+	border: outset 5px #d2950c;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+
+	width: 100px;
+	height: 100px;
+}
+
+#chooseDeckFaction>div>button:nth-child(2) {
+	background-position: 5% 48%;
+}
+#chooseDeckFaction>div>button:nth-child(3) {
+	background-position: 23% 48%;
+}
+#chooseDeckFaction>div>button:nth-child(4) {
+	background-position: 41% 48%;
+}
+
+
+#chooseDeckForGame {
+	display: none;
+
+	width: 600px;
+	top: calc(50% - 150px);
+	left: calc(50% - 300px);
+}
+#chooseDeckForGame>span {
+	margin-bottom: 20px; 
+}
+#chooseDeckForGame>div {
+	float: left;
+}
+
+#chooseDeckFaction>div>span,
+#chooseDeckForGame>span {
+	display: inline-block;
+	width: 85%;
+	color: #fff;
+	font-size: 30px;
+	line-height: 35px;
+
+	border: 5px outset #d2950c;
+	-webkit-border-radius: 27.5px;
+	-moz-border-radius: 27.5px;
+	border-radius: 27.5px;
+
+	background: #2989d8; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #2989d8 0%, #144050 58%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #2989d8 0%,#144050 58%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, #2989d8 0%,#144050 58%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2989d8', endColorstr='#144050',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* GAME RULES */
+
+#mainGame,
+#mainLogin,
+#mainMenu {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+/* MULLIGAN DIV */
+#mulligan {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.85);
+}
+#mulligan>button {
+	height: 40px;
+	width: 100px;
+	position: absolute;
+	top: calc(75% - 20px);
+	left: calc(50% - 50px);
+}
+#mulligan>div {
+	height: 300px;
+	width: 860px;
+	position: absolute;
+	top: calc(45% - 150px);
+	left: calc(50% - 430px);
+}
+#mulligan>div>.card {
+	font-size: 20px;
+	width: 200px;
+	height: 300px;
+}
+.mullCross {
+	position: absolute;
+	background: url('/img/mulligan_cross.png');
+	height: 200px;
+	width: 200px;
+	top: 50px; 
+	box-shadow: none!important;
+}
+
+/* HEROES */
+.hero {
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	left: 0;
+
+	background: url(/img/bases.jpg);
+	background-size: 300% 100%;
+}
+.hero[data-fid="1"] {
+	background-position: 0% 0%; 
+}
+.hero[data-fid="2"] {
+	background-position: 50% 0%; 
+}
+.hero[data-fid="3"] {
+	background-position: 100% 0%; 
+}
+#enemyHero {
+	top: 0;
+}
+#myHero {
+	bottom: 0;
+}
+.hero>.hit {
+	background-position: 0% 15%; 
+}
+.heroHP {
+	display: block;
+	height: 40px;
+	width: 40px;
+	
+	background: rgba(0,0,0,.5);
+	color: #fff;
+	
+	font-size: 30px;
+	line-height: 40px;
+	text-align: center;
+
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+
+/* ACTION POINTS */
+.actionPoints {
+	width: 200px;
+	position: absolute;
+	left: 0;
+	height: 40px;
+	background-color: #333333;
+}
+#enemyActionPoints {
+	top: 200px;
+}
+#myActionPoints {
+	bottom: 200px;
+}
+.ap {
+	line-height: 40px;
+	font-size: 25px;
+	font-weight: 700;
+	color: #dbba14;
+	opacity: 0.3;
+}
+.apOn {
+	color: #dbba14;
+	text-shadow: 0 0 10px #dbba14;
+	opacity: 1;
+}
+
+/* BUTTON */
+#finishButton {
+	height: 100%;
+	width: 100%;
+	background-color: red;
+	color: yellow;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.deckButton,
+#cardlist .card,
+#decklist .deckCard,
+button {
+	cursor: pointer;
+}
+
+/* NICKNAMES */
+.playerNickname {
+	background-color: #444;
+	position: absolute;
+	left: 0px;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+}
+.playerNickname>span {
+	line-height: 40px;
+	font-weight: bold;
+	color: #FFF;
+}
+#enemyNickname {
+	top: 240px;
+}
+#myNickname {
+	bottom: 240px;
+}
+
+
+/* HANDS */
+.hand {
+	position: absolute;
+
+	left: 50%;
+	margin-left: -30%;
+
+	width: 60%;
+	height: 100px;
+	background-color: #CCCCCC;
+
+}
+#enemyHand {
+	top: 0;
+}
+#myHand {
+	bottom: 0;
+}
+
+
+/* DECKS */
+.deck {
+	width: 100px;
+	height: 150px;
+	background-color: #999999;
+	position: absolute;
+	right: 120px;
+
+	-webkit-border-radius: 5%;
+	-moz-border-radius: 5%;
+	border-radius: 5%;
+}
+#enemyDeck {
+	top: 25px;
+}
+#myDeck {
+	bottom: 25px;
+}
+
+
+/* LOG */
+#gamelog {
+	position: absolute;
+	background-color: #666;
+	width: 75px;
+	height: 500px;
+	right: 0;
+	top: 50%;
+	margin-top: -250px;
+}
+
+
+/* TABLES */
+#table {
+	position: absolute;
+	background-color: #AAA;
+	height: 60%;
+	width: 60%;
+	top: 50%;
+	left: 50%;
+	margin-left: -30%;
+	margin-top: -15.5%;
+}
+#enemyTable {
+	float: left;
+	width: 100%;
+	height: calc(50% - 10px);
+	background-color: #DDD;
+}
+#myTable {
+	float: left;
+	width: 100%;
+	height: calc(50% - 10px);
+	background-color: #CCC;
+}
+
+
+/* TURN BUTTON */
+#finishTurn {
+	background-color: #777;
+	position: absolute;
+	top: 50%;
+	right: 120px;
+	margin-top: -20px;
+	height: 40px;
+	width: 100px;
+}
+
+
+/* CARDS */
+.card,
+.cover {
+	background: url(/img/allCovers.jpg);
+	background-size: 600% 100%;
+}
+.card,
+.tablePortrait {
+	/* IMPORTANT FOR ANIMATIONS */
+	overflow: visible!important;
+	
+	float: left;
+	display: block;
+	position: relative;
+}
+.card>.portrait,
+.tablePortrait {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: url(/img/allCards.jpg);
+	background-size: 6000% 100%;
+}
+.card,
+.card>*,
+.tablePortrait,
+.tablePortrait>* {
+	-webkit-box-shadow: 0 0 0.2em rgba(0,0,0,1);
+	-moz-box-shadow: 0 0 0.2em rgba(0,0,0,1);
+	-o-box-shadow: 0 0 0.2em rgba(0,0,0,1);
+	box-shadow: 0 0 0.2em rgba(0,0,0,1);
+}
+.card span,
+.tablePortrait span {
+	color: #fff;
+}
+
+.card {
+	font-size: 10px;
+	height: 150px;
+	width: 100px;
+
+	-webkit-border-radius: 5%;
+	-moz-border-radius: 5%;
+	border-radius: 5%;
+}
+.tablePortrait {
+	font-size: 18px;
+	width: 96px;
+	height: 135px;
+	margin: 7.5px 2px;
+}
+
+.card.war {
+	background-position: 60% 0%;
+}
+.card.sci {
+	background-position: 80% 0%;
+}
+.card.art {
+	background-position: 100% 0%;
+}
+
+.card.war>div.cardName {
+	background: #631d01;
+	background-size: 100% auto;
+}
+.card.sci>div.cardName {
+	background: #4a4614;
+	background-size: 100% auto; 
+}
+.card.art>div.cardName {
+	background: #144050;
+	background-size: 100% auto; 
+}
+
+#deckMenu .card[display="block"] {
+	width: 160px;
+}
+
+
+.putMe {
+	-webkit-box-shadow: 0px 0px 5px 5px rgba(60,255,0,0.4);
+	-moz-box-shadow: 0px 0px 5px 5px rgba(60,255,0,0.4);
+	box-shadow: 0px 0px 5px 5px rgba(60,255,0,0.4);
+}
+.playable {
+	-webkit-box-shadow: 0px 0px 5px 5px rgba(60,255,0,0.4);
+	-moz-box-shadow: 0px 0px 5px 5px rgba(60,255,0,0.4);
+	box-shadow: 0px 0px 5px 5px rgba(60,255,0,0.4);
+}
+
+.cover[data-fid="1"] {
+	background-position: 0% 0%;
+}
+.cover[data-fid="2"] {
+	background-position: 20% 0%;
+}
+.cover[data-fid="3"] {
+	background-position: 40% 0%;
+}
+
+#enemyDeck>.cover,
+#myDeck>.cover {
+	position: absolute;
+}
+#enemyTable>.card {
+	background-color: #A4A4A4;
+}
+#enemyHand>.card {
+	margin-top: -50px;
+}
+#enemyHand>.card:hover {
+	-webkit-box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.7);
+	-moz-box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.7);
+	box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.7);
+}
+
+#myHand>.card,
+#myTable>.card,
+#mulligan>div>.card {
+	background-color: #EEE;
+	cursor: pointer;
+}
+/*#table>div>.card {
+	margin: auto 10px;
+}
+#myHand>.card:hover,
+#enemyTable>.card:hover {
+	font-size: 30px;
+	height: 300px;
+	width: 200px;
+	-webkit-box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 15px 6px rgba(0,0,0,0.5);
+	z-index: 99;
+}
+#myHand>.card:hover {
+	margin-top: -200px;
+}*/
+
+/*
+#myHand>.card:active,
+#myHand>.card:focus {
+	font-size: 10px;
+	height: 150px;
+	width: 100px;
+	margin-top:0;
+}
+*/
+
+
+.card>.portrait {
+	width: 80%;
+	height: 75%;
+	margin: -15% 10% 0 10%;
+}
+
+.cardHP,
+.cardDP,
+.cardAP,
+.cardNum {
+	position: absolute;
+	text-align: center;
+	font-weight: bold;
+	font-size: 133.333333%!important;
+	line-height: 125%;
+}
+.cardHP,
+.cardDP,
+.cardAP {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	padding: 0;
+}
+.card>.cardHP,
+.card>.cardDP,
+.cardAP {
+	width: 16.666667%;
+	height: 11.111111%;
+}
+.tablePortrait>.cardHP,
+.tablePortrait>.cardDP {
+	width: 33.333333%;
+	height: 22.222222%;
+}
+.cardAP {
+	left: -5%;
+	top: -3.333333%;
+	background: #144050;
+}
+.card>.cardDP {
+	left: -5%;
+	bottom: -3.333333%;
+	background: #631d01;
+}
+.card>.cardHP {
+	right: -5%;
+	bottom: -3.333333%;
+	background: #4a4614;
+}
+.tablePortrait>.cardDP {
+	left: 5%;
+	bottom: 3.333333%;
+	background: #631d01;
+}
+.tablePortrait>.cardHP {
+	right: 5%;
+	bottom: 3.333333%;
+	background: #4a4614;
+}
+
+.cardNum {
+	width: 40px;
+	height: 25px;
+	left: 55px;
+	bottom: -20px;
+	background: #251f12;
+}
+span.cardDesc,
+span.cardName {
+	font-size: 100%;
+}
+div.cardName {
+	position: absolute;
+	top: 51.666667%;
+	width: 100%;
+	height: 13.333333%;
+	text-align: center;
+}
+span.cardName {
+	line-height: 200%;
+}
+div.cardDesc {
+	width: 80%;
+	margin: 0 10%;
+	height: 27.5%;
+	background-size: 100% 100%;
+	background: rgba(0, 0, 0, .5);
+}
+span.cardDesc {
+	padding: 0 5%;
+	line-height: 133.333333%;
+}
+
+
+
+/* HELPER DIVS */
+.helper {
+	height: 100%;
+	float: left;
+}
+.hand>.helper {
+	height: 150px;
+}
+#enemyHand>.helper {
+	margin-top: -50px;
+}
+#myHand>.helper {
+	margin-bottom: -50px;
+}
+#myTable>.ui-sortable-placeholder {
+	background: url(/img/red-arrow.png) 50% 50% no-repeat;
+	visibility: visible!important;
+}
+
+.placeholder {
+	background: none!important;
+}
+.greyCard {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+.hidden {
+	display: none!important;
+}
+
+/* ARROW POINTER */
+#arrow {
+	height: 60px;
+	-ms-transform-origin: 0 30px; /* IE 9 */
+	-webkit-transform-origin: 0 30px; /* Chrome, Safari, Opera */
+	transform-origin: 0 30px;
+}
+#arrow>div:first-child {
+	float: left;
+	height: 30px;
+	margin: 15px 0;
+	width: calc(100% - 60px);
+	background-image: url('/img/arrow_body.png');
+	background-repeat: repeat-x;
+
+	/* Chrome, Safari, Opera */
+	-webkit-animation-name: movingBg; 
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	/* Usual syntax */
+	animation-name: movingBg;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+#arrow>div:nth-child(2) {
+	float: left;
+	width: 60px;
+	height: 60px;
+	background-image: url('/img/arrow_tip.png');
+	background-repeat: no-repeat;
+}
+@-webkit-keyframes movingBg {
+	0%   {background-position: 0 0;}
+	100% {background-position: 90px 0;}
+}
+@keyframes movingBg {
+	0%   {background-position: 0 0;}
+	100% {background-position: 90px 0;}
+}
+
+
+/* BURNING ANIMATION */
+#burningCover {
+	overflow: visible!important;
+}
+#fireOut {
+	position: relative;
+	height: 100%;
+	overflow: visible;
+}
+#fireIn {
+	position: absolute;
+	bottom: 0;
+	background-image: url('/img/fire.png');
+	height: 110px;
+	width: 64px;
+}
+
+/* HIT DIV */
+.hit {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('/img/hit.png') no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	text-align: center;
+	box-shadow: none!important;
+}
+.hit>span {
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: calc(50% - 20px);
+	display: inline-block;
+	color: #000;
+}
+
+#ropeOuter {
+	float: left;
+	height: 20px;
+	width: 100%;
+}
+#rope {
+	float: right;
+	background: url('/img/rope.png') repeat-x;
+	background-size: auto 100%;
+	height: 100%;
+}
